@@ -19,3 +19,13 @@ You can deploy your new Vite project with a single command from your terminal us
 ```shell
 $ vercel
 ```
+
+To intall depencies, use 
+```shell
+yarn install
+```
+To run the app, run the following commang
+
+```shell
+yarn run dev
+```
