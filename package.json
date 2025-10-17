@@ -1,7 +1,11 @@
 {
-  "name": "vite-react",
+  "name": "patient-records-dashboard",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Jarurat Care - Patient Records Management Dashboard",
+  "keywords": ["patient-records", "healthcare", "medical-dashboard", "react", "typescript"],
+  "author": "Jarurat Care",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
