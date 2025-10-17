@@ -7,7 +7,7 @@ import './App.css'
 
 function App() {
   const navItems = [
-    { id: 'home', label: 'Home', path: '/' },
+    { id: 'Dashboard', label: 'Dashboard', path: '/' },
     { id: 'patients', label: 'Patients', path: '/patients' },
     { id: 'about', label: 'About', path: '/about' }
   ]
@@ -24,7 +24,7 @@ function App() {
         {/* Main Content */}
         <main className="main-content">
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<Dashboard />} />
             <Route path="/patients" element={<PatientsPage />} />
             <Route path="/about" element={<AboutPage />} />
           </Routes>
