@@ -458,9 +458,9 @@
 }
 
 .view-details-btn {
-  width: 100%;
+  width: 300%;
   padding: 0.75rem;
-  background: linear-gradient(135deg, #354596 0%, hsl(239, 46%, 43%) 100%);
+  background: linear-gradient(135deg, #09e210 0%, hsl(122, 84%, 36%) 100%);
   color: white;
   border: none;
   border-radius: 8px;
