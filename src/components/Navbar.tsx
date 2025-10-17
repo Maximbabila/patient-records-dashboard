@@ -12,7 +12,7 @@ interface NavbarProps {
   navItems: NavItem[];
 }
 
-function Navbar({ brandName, tagline, navItems }: NavbarProps) {
+function Navbar({ brandName, navItems }: NavbarProps) {
   const location = useLocation();
 
   return (

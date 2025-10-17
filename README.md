@@ -23,9 +23,11 @@ $ vercel
 To intall depencies, use 
 ```shell
 yarn install
+
 ```
 To run the app, run the following commang
 
 ```shell
 yarn run dev
+
 ```

@@ -36,6 +36,7 @@ interface PatientFormData {
 
 
 export default function PatientForm() {
+  /** @ts-expect-error */
   const [isNewPatientModalOpen, setIsNewPatientModalOpen] = useState(false);
   const [patients, setPatients] = useState<Patient[]>([])
   const loadPatients = async () => {
