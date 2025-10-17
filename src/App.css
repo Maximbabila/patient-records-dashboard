@@ -7,13 +7,17 @@
 
 /* Header Styles */
 .header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 1rem 0;
+  background: linear-gradient(135deg, #0923e2 0%, hsl(237, 82%, 28%) 100%);
+  color: rgb(206, 206, 206);
+  padding: 1rem 0 2rem 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .header-content {
+  
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
@@ -152,12 +156,12 @@
 
 .btn-secondary {
   background: transparent;
-  color: #667eea;
+  color: #5e6897;
   border: 2px solid #667eea;
 }
 
 .btn-secondary:hover {
-  background: #667eea;
+  background: #838bac;
   color: white;
   transform: translateY(-2px);
 }
@@ -176,7 +180,7 @@
 
 /* Header Section */
 .patients-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0d12b8 0%, #060607 100%);
   color: white;
   padding: 2rem;
   border-radius: 12px;
@@ -194,6 +198,7 @@
 }
 
 .patients-header p {
+  
   font-size: 1.1rem;
   opacity: 0.9;
   margin: 0;
@@ -217,18 +222,24 @@
 
 .search-section {
   min-width: 0; /* Allows flex item to shrink */
+  width: 100%;
 }
 
 .stats-section {
   display: flex;
   align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
 }
 
 .patients-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 1rem;
   min-width: 300px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .stat-item {
@@ -238,6 +249,7 @@
   text-align: center;
   border: 1px solid #e1e5e9;
   transition: all 0.3s ease;
+  min-width: 150px;
 }
 
 .stat-item:hover {
@@ -277,7 +289,8 @@
 /* Search Bar Styles */
 .search-bar {
   flex: 1;
-  max-width: 400px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .search-input-container {
@@ -447,7 +460,7 @@
 .view-details-btn {
   width: 100%;
   padding: 0.75rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #354596 0%, hsl(239, 46%, 43%) 100%);
   color: white;
   border: none;
   border-radius: 8px;

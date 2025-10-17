@@ -4,6 +4,7 @@ import { patientService } from '../services/patientService';
 import SearchBar from '../components/SearchBar';
 import PatientCard from '../components/PatientCard';
 import PatientModal from '../components/PatientModal';
+import NewPatientModal from '../components/NewPatientModal';
 
 function PatientsPage() {
   const [patients, setPatients] = useState<Patient[]>([]);
@@ -11,6 +12,7 @@ function PatientsPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedPatient, setSelectedPatient] = useState<Patient | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isNewPatientModalOpen, setIsNewPatientModalOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -36,8 +38,8 @@ function PatientsPage() {
       setLoading(true);
       setError(null);
       const data = await patientService.getPatients();
-      setPatients(data);
-      setFilteredPatients(data);
+      setPatients(JSON.parse(localStorage.getItem('patients') || "null") || data);
+      setFilteredPatients(JSON.parse(localStorage.getItem('patients') || "null") || data);
     } catch (err) {
       setError('Failed to load patients. Please try again.');
       console.error('Error loading patients:', err);
@@ -57,6 +59,15 @@ function PatientsPage() {
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+    setSelectedPatient(null);
+  };
+
+  const handleAddNewPatient = () => {
+    setIsNewPatientModalOpen(true);
+  };
+
+  const handleCloseNewPatientModal = () => {
+    setIsNewPatientModalOpen(false);
     setSelectedPatient(null);
   };
 
@@ -123,6 +134,9 @@ function PatientsPage() {
           </div>
         </div>
       </div>
+      <button className="btn btn-primary add-new-patient-btn" onClick={handleAddNewPatient}>
+        Add New Patient
+      </button>
 
       {/* Main Content Section */}
       <div className="patients-main">
@@ -170,6 +184,11 @@ function PatientsPage() {
         patient={selectedPatient}
         isOpen={isModalOpen}
         onClose={handleCloseModal}
+      />
+      <NewPatientModal
+        isOpen={isNewPatientModalOpen}
+        onClose={handleCloseNewPatientModal}
+        patient={null}
       />
     </div>
   );

@@ -21,7 +21,7 @@ function Navbar({ brandName, tagline, navItems }: NavbarProps) {
         <Link to="/" className="logo-link">
           <div className="logo">
             <h1>{brandName}</h1>
-            {tagline && <span className="tagline">{tagline}</span>}
+            {/* {tagline && <span className="tagline">{tagline}</span>} */}
           </div>
         </Link>
         <nav className="navigation">

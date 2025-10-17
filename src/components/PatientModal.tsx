@@ -45,24 +45,24 @@ function PatientModal({ patient, isOpen, onClose }: PatientModalProps) {
               <h3>Personal Information</h3>
               <div className="detail-item">
                 <label>Name:</label>
-                <span>{patient.name}</span>
+                <span>{patient?.name}</span>
               </div>
               <div className="detail-item">
                 <label>Age:</label>
-                <span>{patient.age} years</span>
+                <span>{patient?.age} years</span>
               </div>
               <div className="detail-item">
                 <label>Email:</label>
-                <span>{patient.email}</span>
+                <span>{patient?.email}</span>
               </div>
               <div className="detail-item">
                 <label>Phone:</label>
-                <span>{patient.phone}</span>
+                <span>{patient?.phone}</span>
               </div>
               <div className="detail-item">
                 <label>Status:</label>
-                <span className={`status-badge status-${patient.status}`}>
-                  {patient.status}
+                <span className={`status-badge status-${patient?.status}`}>
+                  {patient?.status}
                 </span>
               </div>
             </div>
@@ -71,19 +71,19 @@ function PatientModal({ patient, isOpen, onClose }: PatientModalProps) {
               <h3>Address</h3>
               <div className="detail-item">
                 <label>Street:</label>
-                <span>{patient.address.street}</span>
+                <span>{patient.address?.street}</span>
               </div>
               <div className="detail-item">
                 <label>City:</label>
-                <span>{patient.address.city}</span>
+                <span>{patient.address?.city}</span>
               </div>
               <div className="detail-item">
                 <label>State:</label>
-                <span>{patient.address.state}</span>
+                <span>{patient.address?.state}</span>
               </div>
               <div className="detail-item">
                 <label>Zip Code:</label>
-                <span>{patient.address.zipcode}</span>
+                <span>{patient.address?.zipcode}</span>
               </div>
             </div>
 
@@ -91,15 +91,15 @@ function PatientModal({ patient, isOpen, onClose }: PatientModalProps) {
               <h3>Medical Information</h3>
               <div className="detail-item">
                 <label>Blood Type:</label>
-                <span>{patient.medicalInfo.bloodType}</span>
+                <span>{patient.medicalInfo?.bloodType}</span>
               </div>
               <div className="detail-item">
                 <label>Allergies:</label>
-                <span>{patient.medicalInfo.allergies.join(', ')}</span>
+                <span>{patient.medicalInfo?.allergies.join(', ')}</span>
               </div>
               <div className="detail-item">
                 <label>Conditions:</label>
-                <span>{patient.medicalInfo.conditions.join(', ')}</span>
+                <span>{patient.medicalInfo?.conditions.join(', ')}</span>
               </div>
               {patient.height && (
                 <div className="detail-item">
@@ -143,15 +143,15 @@ function PatientModal({ patient, isOpen, onClose }: PatientModalProps) {
               <h3>Emergency Contact</h3>
               <div className="detail-item">
                 <label>Name:</label>
-                <span>{patient.emergencyContact.name}</span>
+                <span>{patient.emergencyContact?.name}</span>
               </div>
               <div className="detail-item">
                 <label>Relationship:</label>
-                <span>{patient.emergencyContact.relationship}</span>
+                <span>{patient.emergencyContact?.relationship}</span>
               </div>
               <div className="detail-item">
                 <label>Phone:</label>
-                <span>{patient.emergencyContact.phone}</span>
+                <span>{patient.emergencyContact?.phone}</span>
               </div>
             </div>
 
